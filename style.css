@@ -1,0 +1,270 @@
+@font-face {
+    font-family: Geosans;
+    src: url(/Fonts/GeosansLight.ttf);
+}
+@font-face {
+    font-family: Modern;
+    src: url(/Fonts/ModernSans-Light.otf);
+}
+
+*{
+    margin: 0px;
+}
+
+body{
+    background-color: #fff;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 36px 0;
+    min-width: 1024px;
+}
+
+#options ul{
+    display: flex;
+}
+
+#options ul li{
+    list-style: none;
+    margin-right: 40px;
+}
+
+#options ul li a{
+    text-decoration: none;
+    font-family: "Geosans";
+    font-size: 18px;
+    color: black;
+    transition: 0.2s;
+}
+
+#options ul li a:hover{
+    color: #F4A261;
+    font-weight: bold;
+}
+#options ul li a:active{
+    color: black;
+    font-weight: bold;
+}
+
+#welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px
+}
+
+.content{
+    width: 55%;
+}
+
+h1{
+    font-family: "Geosans";
+    font-size: 78px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+
+#welcome p{
+    font-family: "Modern";
+    font-size: 20px;
+    margin-bottom: 80px;
+    text-align: justify;
+}
+
+#redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+#redes li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    background-color: #F4A261;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+}
+
+#redes li a{
+    font-style: none;
+    color: black;
+    transition: .2s;
+}
+
+#redes li a:hover{
+    font-size: 44px;
+}
+
+#grid-layout{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid-box{
+    text-align: center;
+    font-family: "Geosans";
+}
+
+.b1 img{
+    width: 600px;
+}
+
+.b1{
+    grid-column: 1/3;
+}
+
+.b2{
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    text-align: start;
+}
+
+.b2 h2{
+    text-align: center;
+    margin: 50px;
+    font-size: 38px;
+}
+
+.b2 p{
+    font-size: 18px;
+}
+
+.b3{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    text-align: start;
+}
+
+.b3 h2{
+    text-align: center;
+    margin: 50px;
+    font-size: 38px;
+}
+
+.b3 p{
+    font-size: 18px;
+}
+
+.b4{
+    grid-column: 2/4;
+}
+
+.b4 img{
+    width: 600px;
+}
+
+#formContact{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.contForm{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contForm h3{
+    text-align: start;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-family: "Geosans";
+}
+
+.contForm textarea{
+    padding: 20px;
+    font-family: "Modern";
+    font-size: 18px;
+    width: 95% !important; 
+}
+
+.contForm input{
+    padding: 16px;
+    font-family: "Modern";
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contForm button{
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    font-family: "Geosans";
+    font-weight: bolder;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contForm button:hover{
+    background-color: #F4A261;
+}
+
+@media (max-width: 830px) {
+    #welcome{
+        height: 600px;
+    }
+
+    h1{
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+
+    #welcome p{
+        font-size: 15px;
+        margin-bottom: 80px;
+    }
+
+    #redes li{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .b1{
+        grid-column: 1/4;
+    }
+    
+    .b2{
+        grid-column: 1/4;
+    }
+    
+    .b3{
+        grid-column: 1/4;
+    }
+    
+    .b4{
+        grid-column: 1/4;
+    }
+
+    .grid-box img{
+        width: 400px;
+    }
+    
+}
