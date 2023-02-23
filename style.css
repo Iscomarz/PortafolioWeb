@@ -17,8 +17,11 @@ body{
 
 nav{
     display: flex;
+    height: 75px;
+    width: 100vw;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     padding: 36px 0;
     min-width: 1024px;
 }
@@ -44,9 +47,20 @@ nav{
     color: #F4A261;
     font-weight: bold;
 }
-#options ul li a:active{
+#options ul li a.active{
     color: black;
     font-weight: bold;
+}
+
+#options ul.show{
+    top: 75px;
+}
+
+.btn_menu{
+    margin-right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
 }
 
 #welcome{
@@ -89,11 +103,14 @@ h1{
     align-items: center;
     justify-content: center;
     list-style: none;
-    background-color: #F4A261;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     font-size: 40px;
+}
+
+.circulo{
+    background-color: #F4A261;
 }
 
 #redes li a{
@@ -183,13 +200,13 @@ h1{
     margin-bottom: 50px;
 }
 
-.contForm{
+#contForm{
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-.contForm h3{
+#contForm h3{
     text-align: start;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -197,21 +214,21 @@ h1{
     font-family: "Geosans";
 }
 
-.contForm textarea{
+#contForm textarea{
     padding: 20px;
     font-family: "Modern";
     font-size: 18px;
     width: 95% !important; 
 }
 
-.contForm input{
+#contForm input{
     padding: 16px;
     font-family: "Modern";
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-.contForm button{
+#submitForm{
     width: 200px;
     padding: 10px;
     background-color: #fff;
@@ -221,8 +238,49 @@ h1{
     cursor: pointer;
 }
 
-.contForm button:hover{
+#submitForm:hover{
     background-color: #F4A261;
+}
+
+.changeColor{
+    margin-top: 50px;
+    padding: 15px;
+}
+
+.changeColor button{
+    padding: 20px;
+}
+
+#contact{
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Geosans";
+    font-size: 20px;
+}
+
+#contactInfo{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#contactInfo h3{
+    margin-bottom: 25px;
+}
+
+#chatButtons{
+    margin-bottom: 25px;
+}
+
+#chatButtons a{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#contForm p{
+    color: red;
 }
 
 @media (max-width: 830px) {
@@ -266,5 +324,40 @@ h1{
     .grid-box img{
         width: 400px;
     }
+
+    .btn_menu{
+        display: inline-flex;
+    }
     
+    #options{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 75px);
+        background: #414141;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+
+    #options li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+
+    #options li:hover{
+        background: none;
+    }
+
+    #options li a{
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    #options li a:hover{
+        color: #F4A261;
+    }
+
+
 }

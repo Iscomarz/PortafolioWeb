@@ -7,6 +7,7 @@
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7a890f7a70.js" crossorigin="anonymous"></script>
+    <script src="/app.js"></script>
 </head>
 <body>
     <header>
@@ -24,18 +25,38 @@
             </div>
         </nav>
     </header>
+    <section id="contact">
+        <div id="contactInfo">
+            <h3>Contact Me!</h3>
+            <p>You can contact me through my networks:</p>
+            <p>franmtz96@gmail.com</p>
+        </div>
+        <div id="chatButtons">
+            <a target="_blank" aria-label="Chat on WhatsApp" href="https://wa.me/6146029050"> <img width="250px" alt="Chat on WhatsApp" src="/Img/ChatOnWhatsAppButton/WhiteTheme/WhatsAppButtonWhiteSmall.png"/></a>
+            <a target="_blank" aria-label="Chat on Gmail" href="https://mail.google.com/"> <img width="200px" alt="Chat on Gmail" src="/Img/gmail-logo.jpg"/></a>
+            <a target="_blank" aria-label="Chat on Linkedin" href="https://www.linkedin.com/in/codeisco"> <img width="200px" alt="Chat on Linkedin" src="/Img/LinkedIn_Logo.svg.png"/></a>
+        </div>
+    </section>
+    
 
     <section id="formContact">
-        <div class=contForm>
-            <h3>Dear Francisco,</h3>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Write your message here..."></textarea>
+
+        <form action="#" onsubmit="return false" method="POST" id=contForm>
+            
+            <h3>Dear Francisco,</h3><p>*this section is in work</p>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
 
             <h3>Best,</h3>
-            <input type="text" placeholder="Your name">
+
+            <label for="name"></label>
+            <input type="text" name="name" id="nombre" placeholder="Your name">
+
+            <label for="email"></label>
             <input type="email" name="emal" id="email" placeholder="Your email">
             
-            <button>Send email</button>
-        </div>
+            <input id="submitForm" type="submit" value="Send Message">
+
+        </form>
 
     </section>
 </body>
