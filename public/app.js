@@ -1,42 +1,44 @@
 'use strict'
+import { initializeApp } from 'firebase/app';
+import "firebase/messaging";
 
-window.addEventListener(`load`,() => {
 
-    const btn_menu = document.querySelector('.btn_menu')
-    if(btn_menu){
-        btn_menu.addEventListener('click',() =>{
-            const options = document.querySelector('#options')
-            options.classList.toggle('show')
-        })
-    }
+window.addEventListener(`load`, () => {
+    // TODO: Replace the following with your app's Firebase project configuration
+    const firebaseConfig = {
+        //...
+    };
 
-//Formulario
+    const app = initializeApp(firebaseConfig);
+    const messaging = firebase.messaging();
 
-        var formulario = document.querySelector("#contForm");
+    //Formulario
 
-        formulario.addEventListener('submit', function(){
-            console.log("evento submit capturado");
+    var formulario = document.querySelector("#contForm");
 
-            var nombre = document.querySelector("#nombre").value;
-            var email = document.querySelector("#email").value;
-            var message = document.querySelector("#message").value;
+    formulario.addEventListener('submit', function () {
+        console.log("evento submit capturado");
 
-            if(nombre.trim() == null || nombre.trim().length == 0 ){
-                alert("Debes ingresar un nombre y un email");
-                return false
-            }
+        var nombre = document.querySelector("#nombre").value;
+        var email = document.querySelector("#email").value;
+        var message = document.querySelector("#message").value;
 
-            if(email.trim() == null || email.trim().length == 0 ){
-                alert("Debes ingresar un email");
-                return false
-            }
+        if (nombre.trim() == null || nombre.trim().length == 0) {
+            alert("Debes ingresar un nombre y un email");
+            return false
+        }
 
-            if(message.trim() == null || message.trim().length == 0 ){
-                alert("Debes ingresar un mensaje");
-                return false
-            }
+        if (email.trim() == null || email.trim().length == 0) {
+            alert("Debes ingresar un email");
+            return false
+        }
 
-        } );
+        if (message.trim() == null || message.trim().length == 0) {
+            alert("Debes ingresar un mensaje");
+            return false
+        }
+
+    });
 
 });
 

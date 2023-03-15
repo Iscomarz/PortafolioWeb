@@ -1,41 +1,50 @@
 @font-face {
     font-family: Geosans;
-    src: url(/fonts/GeosansLight.ttf);
-}
-@font-face {
-    font-family: Modern;
-    src: url(/fonts/ModernSans-Light.otf);
+    src: url(./fonts/GeosansLight.ttf);
 }
 
-*{
+@font-face {
+    font-family: Modern;
+    src: url(./fonts/ModernSans-Light.otf);
+}
+
+* {
     margin: 0px;
 }
 
-body{
+header {
+    display: flex;
+    justify-content: center;
+}
+
+body {
     background-color: #fff;
 }
 
-nav{
+nav {
     display: flex;
     height: 75px;
-    width: 100vw;
+    width: 90%;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 36px 0;
-    min-width: 1024px;
+    padding: 18px 0;
 }
 
-#options ul{
+#logo a img {
+    height: 45px;
+}
+
+#options ul {
     display: flex;
 }
 
-#options ul li{
+#options ul li {
     list-style: none;
     margin-right: 40px;
 }
 
-#options ul li a{
+#options ul li a {
     text-decoration: none;
     font-family: "Geosans";
     font-size: 18px;
@@ -43,69 +52,92 @@ nav{
     transition: 0.2s;
 }
 
-#options ul li a:hover{
-    color: #F4A261;
+#options ul li a:hover {
+    color: #f36d00;
     font-weight: bold;
 }
-#options ul li a.active{
+
+#options ul li a .active {
     color: black;
     font-weight: bold;
 }
 
-#options ul.show{
-    top: 75px;
+.btn-menu {
+    display: none;
 }
 
-.cv{
+.barra-menu {
+    font-size: 24px;
+}
+
+.cv {
     font-weight: bold;
     font-size: 18px !important;
 }
 
-.btn_menu{
-    margin-right: 30px;
-    font-size: 25px;
-    cursor: pointer;
-    display: none;
-}
 
-#welcome{
+#welcome {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 500px
-}
-
-.content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    height: 500px;
     align-items: center;
+
 }
 
-h1{
-    font-family: "Geosans";
-    font-size: 78px;
-    font-weight: bolder;
-    margin-bottom: 15px;
-}
-
-#welcome p{
-    width: 52%;
-    font-family: "Modern";
-    font-size: 20px;
-    margin-bottom: 80px;
-    text-align: justify;
-}
-
-#redes{
+.content {
+    width: 60%;
+    height: 500px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 30px;
 }
 
-#redes li{
+.textoW {
+    width: 60%;
+}
+
+h1 {
+    font-family: "Geosans";
+    font-size: 54px;
+    color: #F4A261;
+}
+
+h2 {
+    font-family: "Geosans";
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#welcome p {
+    font-family: "Geosans";
+    font-size: 20px;
+}
+
+.circulo-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.76);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-inicio {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+}
+
+#redes {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+#redes li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,25 +146,23 @@ h1{
     width: 100px;
     height: 100px;
     font-size: 40px;
-    margin-left: 15px;
-    margin-right: 15px;
 }
 
-.circulo{
+.circulo {
     background-color: #F4A261;
 }
 
-#redes li a{
+#redes li a {
     font-style: none;
     color: black;
     transition: .2s;
 }
 
-#redes li a:hover{
+#redes li a:hover {
     font-size: 44px;
 }
 
-#grid-layout{
+#grid-layout {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 80%;
@@ -141,20 +171,20 @@ h1{
     padding: 20px;
 }
 
-.grid-box{
+.grid-box {
     text-align: center;
     font-family: "Geosans";
 }
 
-.b1 img{
+.b1 img {
     width: 600px;
 }
 
-.b1{
+.b1 {
     grid-column: 1/3;
 }
 
-.b2{
+.b2 {
     grid-column: 3/4;
     display: flex;
     flex-direction: column;
@@ -163,17 +193,17 @@ h1{
     text-align: start;
 }
 
-.b2 h2{
+.b2 h2 {
     text-align: center;
     margin: 50px;
     font-size: 38px;
 }
 
-.b2 p{
+.b2 p {
     font-size: 18px;
 }
 
-.b3{
+.b3 {
     grid-column: 1/2;
     display: flex;
     flex-direction: column;
@@ -182,25 +212,25 @@ h1{
     text-align: start;
 }
 
-.b3 h2{
+.b3 h2 {
     text-align: center;
     margin: 50px;
     font-size: 38px;
 }
 
-.b3 p{
+.b3 p {
     font-size: 18px;
 }
 
-.b4{
+.b4 {
     grid-column: 2/4;
 }
 
-.b4 img{
+.b4 img {
     width: 600px;
 }
 
-#formContact{
+#formContact {
     display: flex;
     flex-direction: column;
     height: 600px;
@@ -209,13 +239,13 @@ h1{
     margin-bottom: 50px;
 }
 
-#contForm{
+#contForm {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-#contForm h3{
+#contForm h3 {
     text-align: start;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -223,21 +253,21 @@ h1{
     font-family: "Geosans";
 }
 
-#contForm textarea{
+#contForm textarea {
     padding: 20px;
     font-family: "Modern";
     font-size: 18px;
-    width: 95% !important; 
+    width: 95% !important;
 }
 
-#contForm input{
+#contForm input {
     padding: 16px;
     font-family: "Modern";
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-#submitForm{
+#submitForm {
     width: 200px;
     padding: 10px;
     background-color: #fff;
@@ -247,20 +277,20 @@ h1{
     cursor: pointer;
 }
 
-#submitForm:hover{
+#submitForm:hover {
     background-color: #F4A261;
 }
 
-.changeColor{
+.changeColor {
     margin-top: 50px;
     padding: 15px;
 }
 
-.changeColor button{
+.changeColor button {
     padding: 20px;
 }
 
-#contact{
+#contact {
     width: 100%;
     margin: 0px;
     display: flex;
@@ -270,95 +300,101 @@ h1{
     font-size: 20px;
 }
 
-#contactInfo{
+#contactInfo {
     text-align: center;
     margin-bottom: 25px;
 }
 
-#contactInfo h3{
+#contactInfo h3 {
     margin-bottom: 25px;
 }
 
-#chatButtons{
+#chatButtons {
     margin-bottom: 25px;
 }
 
-#chatButtons a{
+#chatButtons a {
     padding-left: 30px;
     padding-right: 30px;
 }
 
-#contForm p{
+#contForm p {
     color: red;
 }
 
 @media (max-width: 850px) {
-    h1{
-        font-size: 55px;
-        margin-bottom: 15px;
-    }
 
-    #chatButtons a img{
+    #chatButtons a img {
         width: 100px;
     }
 
-    .whapp{
+    .whapp {
         width: 170px !important;
     }
 
-    .b1{
-        grid-column: 1/4;
-    }
-    
-    .b2{
-        grid-column: 1/4;
-    }
-    
-    .b3{
-        grid-column: 1/4;
-    }
-    
-    .b4{
+    .b1 {
         grid-column: 1/4;
     }
 
-    .grid-box img{
+    .b2 {
+        grid-column: 1/4;
+    }
+
+    .b3 {
+        grid-column: 1/4;
+    }
+
+    .b4 {
+        grid-column: 1/4;
+    }
+
+    .grid-box img {
         width: 400px;
     }
 
-    .btn_menu{
-        display: inline-flex;
+    #options {
+        display: none;
     }
-    
-    #options{
-        position: fixed;
-        width: 100vw;
-        height: calc(100% - 75px);
-        background: #414141;
-        top: -100vh;
-        text-align: center;
-        transition: all .4s;
+
+    .btn-menu {
+        display: block;
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+
+    #logo a img {
+        height: 35px;
+    }
+
+    #redes li {
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .content {
+        width: 100%;
         flex-direction: column;
     }
 
-    #options li{
-        margin: 30px 0 0 0;
-        line-height: 30px;
+    h1 {
+        font-size: 26px;
+        margin-bottom: 0px;
     }
 
-    #options li:hover{
-        background: none;
-    }
-
-    #options li a{
+    h2 {
         font-size: 20px;
-        color: #fff;
-        font-weight: bold;
     }
 
-    #options li a:hover{
-        color: #F4A261;
+    #welcome p {
+        font-size: 12px;
     }
 
+    .circulo-img {
+        width: 170px;
+        height: 170px;
+    }
 
-} 
+}
